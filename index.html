@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Cafe</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<video autoplay muted loop id="bgVideo">
+    <source src="coffee.mp4" type="video/mp4">
+</video>
+
+<div class="overlay">
+
+<h1>☕ Coffee Cafe</h1>
+
+<p>Fresh Coffee Delivered To Your Home</p>
+
+<button id="openPortal">
+Order Now
+</button>
+
+</div>
+
+<div id="orderPortal" class="portal">
+
+<div class="popup">
+
+<span id="closePortal">&times;</span>
+
+<h2>Place Order</h2>
+
+<form id="orderForm">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<textarea
+id="address"
+placeholder="Address"
+required></textarea>
+
+<button
+type="button"
+onclick="getLocation()">
+📍 Get Live Location
+</button>
+
+<p id="locationText">
+Location Not Selected
+</p>
+
+<h3>Payment Method</h3>
+
+<label>
+<input
+type="radio"
+name="payment"
+value="Cash On Delivery"
+checked>
+Cash On Delivery
+</label>
+
+<br>
+
+<label>
+<input
+type="radio"
+name="payment"
+value="UPI">
+UPI
+</label>
+
+<div class="qrBox">
+
+<img
+src="qr.png"
+alt="UPI QR"
+id="qrImage">
+
+</div>
+
+<button type="submit">
+
+☕ Place Order
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
