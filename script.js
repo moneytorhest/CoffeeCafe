@@ -80,7 +80,7 @@ async function submitOrder(e){
 
     try{
 
-        const response = await fetch("https://morgan-def-engines-surgical.trycloudflare.com/order", {
+        const response = await fetch("/order", {{
 
             method:"POST",
 
