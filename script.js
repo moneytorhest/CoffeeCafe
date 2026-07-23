@@ -7,12 +7,12 @@ const portal = document.getElementById("orderPortal");
 const openPortal = document.getElementById("openPortal");
 const closePortal = document.getElementById("closePortal");
 
-// Open popup
+// Open Popup
 openPortal.addEventListener("click", () => {
     portal.style.display = "flex";
 });
 
-// Close popup
+// Close Popup
 closePortal.addEventListener("click", () => {
     portal.style.display = "none";
 });
@@ -41,7 +41,7 @@ function getLocation() {
 
             document.getElementById("locationText").innerHTML =
                 "✅ Location Captured<br>" +
-                latitude + ", " + longitude;
+                latitude + "<br>" + longitude;
 
         },
 
@@ -63,6 +63,10 @@ async function submitOrder(e){
     e.preventDefault();
 
     const order = {
+
+        item: document.querySelector('input[name="item"]:checked').value,
+
+        quantity: document.getElementById("quantity").value,
 
         name: document.getElementById("name").value,
 
