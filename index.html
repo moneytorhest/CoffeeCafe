@@ -4,28 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coffee Cafe</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<video autoplay muted loop id="bgVideo">
+<!-- Background Video -->
+<video autoplay muted loop playsinline id="bgVideo">
     <source src="coffee.mp4" type="video/mp4">
 </video>
 
 <div class="overlay">
 
-<h1>☕ Coffee Cafe</h1>
+    <h1>☕ Coffee Cafe</h1>
 
-<p>Fresh Coffee Delivered To Your Home</p>
+    <p>Fresh Cold Coffee Delivered To Your Home</p>
 
-<button id="openPortal">
-Order Now
-</button>
+    <button id="openPortal">
+        ORDER NOW
+    </button>
 
 </div>
+
+<!-- Popup -->
 
 <div id="orderPortal" class="portal">
 
@@ -33,9 +34,111 @@ Order Now
 
 <span id="closePortal">&times;</span>
 
-<h2>Place Order</h2>
+<h2>Select Your Coffee</h2>
 
 <form id="orderForm">
+
+<!-- Cold Coffee -->
+
+<div class="menuItem">
+
+<video autoplay muted loop playsinline>
+
+<source src="coldcoffee.mp4" type="video/mp4">
+
+</video>
+
+<div class="menuText">
+
+<h3>🥤 Cold Coffee</h3>
+
+<p>Fresh Chilled Cold Coffee</p>
+
+<label>
+
+<input
+type="radio"
+name="item"
+value="Cold Coffee"
+checked>
+
+Select
+
+</label>
+
+</div>
+
+</div>
+
+<!-- Cocoa -->
+
+<div class="menuItem">
+
+<video autoplay muted loop playsinline>
+
+<source src="cocoa.mp4" type="video/mp4">
+
+</video>
+
+<div class="menuText">
+
+<h3>🍫 Cold Coffee + Extra Cocoa</h3>
+
+<p>Extra Chocolate Taste</p>
+
+<label>
+
+<input
+type="radio"
+name="item"
+value="Cold Coffee + Extra Cocoa Powder">
+
+Select
+
+</label>
+
+</div>
+
+</div>
+
+<!-- Coffee -->
+
+<div class="menuItem">
+
+<video autoplay muted loop playsinline>
+
+<source src="coffeehot.mp4" type="video/mp4">
+
+</video>
+
+<div class="menuText">
+
+<h3>☕ Coffee</h3>
+
+<p>Fresh Hot Coffee</p>
+
+<label>
+
+<input
+type="radio"
+name="item"
+value="Coffee">
+
+Select
+
+</label>
+
+</div>
+
+</div>
+
+<input
+type="number"
+id="quantity"
+placeholder="Quantity"
+value="1"
+min="1"
+required>
 
 <input
 type="text"
@@ -46,57 +149,67 @@ required>
 <input
 type="tel"
 id="phone"
-placeholder="Phone Number"
+placeholder="Mobile Number"
 required>
 
 <textarea
 id="address"
-placeholder="Address"
+placeholder="Delivery Address"
 required></textarea>
 
 <button
 type="button"
 onclick="getLocation()">
+
 📍 Get Live Location
+
 </button>
 
 <p id="locationText">
+
 Location Not Selected
+
 </p>
 
 <h3>Payment Method</h3>
 
 <label>
+
 <input
 type="radio"
 name="payment"
 value="Cash On Delivery"
 checked>
+
 Cash On Delivery
+
 </label>
 
-<br>
+<br><br>
 
 <label>
+
 <input
 type="radio"
 name="payment"
 value="UPI">
+
 UPI
+
 </label>
 
 <div class="qrBox">
 
 <img
 src="qr.png"
-alt="UPI QR"
-id="qrImage">
+id="qrImage"
+alt="QR Code">
 
 </div>
 
 <button type="submit">
 
-☕ Place Order
+☕ PLACE ORDER
 
 </button>
 
