@@ -1,46 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Coffee Cafe</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- Background Video -->
-<video autoplay muted loop playsinline id="bgVideo">
-    <source src="coffee.mp4" type="video/mp4">
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<video autoplay muted loop playsinline class="hero-video">
+
+<source src="hero.mp4" type="video/mp4">
+
 </video>
 
-<div class="overlay">
+<div class="hero-overlay"></div>
 
-    <h1>☕ Coffee Cafe</h1>
+<header>
 
-    <p>Fresh Cold Coffee Delivered To Your Home</p>
+<div class="logo">
 
-    <button id="openPortal">
-        ORDER NOW
-    </button>
+☕ Coffee Cafe
 
 </div>
 
-<!-- Popup -->
+<nav>
 
-<div id="orderPortal" class="portal">
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 
-<div class="popup">
+</nav>
 
-<span id="closePortal">&times;</span>
+</header>
 
-<h2>Select Your Coffee</h2>
+<div class="hero-content">
 
-<form id="orderForm">
+<h3>
 
-<!-- Cold Coffee -->
+PREMIUM COFFEE EXPERIENCE
 
-<div class="menuItem">
+</h3>
+
+<h1>
+
+A Sip Of <span>Pure Gold.</span>
+
+</h1>
+
+<p>
+
+Fresh Cold Coffee Made With Premium Coffee Beans,
+Rich Cocoa Powder And Fresh Milk.
+
+</p>
+
+<div class="hero-buttons">
+
+<button id="openPortal">
+
+Order Now
+
+</button>
+
+<a href="#menu">
+
+Explore Menu
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MENU ================= -->
+
+<section id="menu" class="menu">
+
+<h2>
+
+Our Special Menu
+
+</h2>
+
+<p>
+
+Freshly Made For Every Customer
+
+</p>
+
+<div class="menu-grid">
+
+<!-- ITEM 1 -->
+
+<div class="card">
 
 <video autoplay muted loop playsinline>
 
@@ -48,31 +116,35 @@
 
 </video>
 
-<div class="menuText">
+<h3>
 
-<h3>🥤 Cold Coffee</h3>
+🥤 Cold Coffee
 
-<p>Fresh Chilled Cold Coffee</p>
+</h3>
 
-<label>
+<p>
 
-<input
-type="radio"
-name="item"
-value="Cold Coffee"
-checked>
+Creamy & Chilled
+
+</p>
+
+<h4>
+
+₹80
+
+</h4>
+
+<button class="selectBtn">
 
 Select
 
-</label>
+</button>
 
 </div>
 
-</div>
+<!-- ITEM 2 -->
 
-<!-- Cocoa -->
-
-<div class="menuItem">
+<div class="card">
 
 <video autoplay muted loop playsinline>
 
@@ -80,30 +152,35 @@ Select
 
 </video>
 
-<div class="menuText">
+<h3>
 
-<h3>🍫 Cold Coffee + Extra Cocoa</h3>
+🍫 Cold Coffee + Extra Cocoa
 
-<p>Extra Chocolate Taste</p>
+</h3>
 
-<label>
+<p>
 
-<input
-type="radio"
-name="item"
-value="Cold Coffee + Extra Cocoa Powder">
+Chocolate Lover Special
+
+</p>
+
+<h4>
+
+₹100
+
+</h4>
+
+<button class="selectBtn">
 
 Select
 
-</label>
+</button>
 
 </div>
 
-</div>
+<!-- ITEM 3 -->
 
-<!-- Coffee -->
-
-<div class="menuItem">
+<div class="card">
 
 <video autoplay muted loop playsinline>
 
@@ -111,26 +188,63 @@ Select
 
 </video>
 
-<div class="menuText">
+<h3>
 
-<h3>☕ Coffee</h3>
+☕ Hot Coffee
 
-<p>Fresh Hot Coffee</p>
+</h3>
 
-<label>
+<p>
 
-<input
-type="radio"
-name="item"
-value="Coffee">
+Fresh Hot Coffee
+
+</p>
+
+<h4>
+
+₹60
+
+</h4>
+
+<button class="selectBtn">
 
 Select
 
-</label>
+</button>
 
 </div>
 
 </div>
+
+</section><!-- ================= ORDER POPUP ================= -->
+
+<div id="orderPortal" class="portal">
+
+<div class="popup">
+
+<span id="closePortal">&times;</span>
+
+<h2>☕ Place Your Order</h2>
+
+<form id="orderForm">
+
+<label>Select Coffee</label>
+
+<select id="item" required>
+
+<option value="Cold Coffee">
+🥤 Cold Coffee - ₹80
+</option>
+
+<option value="Cold Coffee + Extra Cocoa Powder">
+🍫 Cold Coffee + Extra Cocoa - ₹100
+</option>
+
+<option value="Hot Coffee">
+☕ Hot Coffee - ₹60
+</option>
+
+</select>
 
 <input
 type="number"
@@ -155,7 +269,8 @@ required>
 <textarea
 id="address"
 placeholder="Delivery Address"
-required></textarea>
+required>
+</textarea>
 
 <button
 type="button"
@@ -203,13 +318,13 @@ UPI
 <img
 src="qr.png"
 id="qrImage"
-alt="QR Code">
+alt="UPI QR Code">
 
 </div>
 
 <button type="submit">
 
-☕ PLACE ORDER
+☕ Place Order
 
 </button>
 
@@ -218,6 +333,64 @@ alt="QR Code">
 </div>
 
 </div>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+<h2>Why Choose Coffee Cafe?</h2>
+
+<div class="aboutGrid">
+
+<div class="aboutCard">
+🔥 Freshly Brewed Every Order
+</div>
+
+<div class="aboutCard">
+🚚 Fast Home Delivery
+</div>
+
+<div class="aboutCard">
+🥤 Premium Ingredients
+</div>
+
+<div class="aboutCard">
+⭐ Loved By Customers
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 +91 XXXXXXXXXX</p>
+
+<p>📧 coffeecafe@email.com</p>
+
+<p>📍 Your City</p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>Coffee Cafe</h2>
+
+<p>
+Premium Coffee • Fast Delivery • Best Taste
+</p>
+
+<p>
+© 2026 Coffee Cafe. All Rights Reserved.
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
